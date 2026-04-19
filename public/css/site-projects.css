@@ -1,0 +1,193 @@
+/**
+ * Portfolio project pages (/projectN/) — visual continuity with the main Next.js site.
+ * Load after style.css. Scoped with body.portfolio-project.
+ */
+:root {
+  --cv-bg: #05060a;
+  --cv-text: #cbd5e1;
+  --cv-muted: #94a3b8;
+  --cv-accent: #22d3ee;
+  --cv-accent-bright: #67e8f9;
+  --cv-border: rgba(255, 255, 255, 0.1);
+}
+
+body.portfolio-project {
+  color-scheme: dark;
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif !important;
+  background: var(--cv-bg) !important;
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(34, 211, 238, 0.1), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 100% 0%, rgba(167, 139, 250, 0.08), transparent 50%) !important;
+  color: var(--cv-text) !important;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.portfolio-project #page {
+  background: transparent !important;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+.portfolio-project .pg-loader {
+  display: none !important;
+}
+
+.portfolio-project #pg-about {
+  padding: 6.5rem 0 4rem !important;
+  background: transparent !important;
+  clear: both;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-project #pg-about {
+    padding: 5.5rem 0 3rem !important;
+  }
+}
+
+.portfolio-project #pg-about .container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.portfolio-project #pg-about .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.portfolio-project #pg-about [class*="col-"] {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  float: none !important;
+}
+
+.portfolio-project #pg-about .pg-heading h2 {
+  font-family: "Syne", system-ui, sans-serif !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  font-size: clamp(1.65rem, 4.5vw, 2.35rem) !important;
+  letter-spacing: -0.03em;
+  line-height: 1.15 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.portfolio-project #pg-about > .container > .row:nth-child(2) .col-md-8 > h2 {
+  font-family: "Syne", system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  color: #f8fafc !important;
+  font-size: 1.35rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+.portfolio-project #pg-about p {
+  color: var(--cv-text) !important;
+  font-size: 1rem !important;
+  margin-bottom: 1.1rem !important;
+}
+
+.portfolio-project #pg-about p a,
+.portfolio-project #pg-about a.GH-link,
+.portfolio-project #pg-about a[class*="GH-link"] {
+  color: var(--cv-accent) !important;
+  text-decoration: none !important;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.35);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.portfolio-project #pg-about p a:hover,
+.portfolio-project #pg-about a.GH-link:hover,
+.portfolio-project #pg-about a[class*="GH-link"]:hover {
+  color: var(--cv-accent-bright) !important;
+  border-bottom-color: rgba(103, 232, 249, 0.55);
+}
+
+.portfolio-project .goback a {
+  width: 3rem !important;
+  height: 3rem !important;
+  min-width: 3rem !important;
+  min-height: 3rem !important;
+  border-radius: 9999px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25), 0 20px 50px -28px rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+
+.portfolio-project .goback a:hover,
+.portfolio-project .goback a:focus {
+  background: rgba(34, 211, 238, 0.1) !important;
+  border-color: rgba(34, 211, 238, 0.35) !important;
+  transform: translateY(-1px);
+  outline: none !important;
+}
+
+.portfolio-project .goback a i {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: auto !important;
+  width: auto !important;
+  font-size: 1.15rem !important;
+  color: #e2e8f0 !important;
+  vertical-align: middle !important;
+}
+
+.portfolio-project #pg-main-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  border: 1px solid var(--cv-border);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 24px 80px -32px rgba(0, 0, 0, 0.75);
+}
+
+.portfolio-project .info {
+  margin: 0 0 2rem 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  list-style: none !important;
+}
+
+@media (min-width: 992px) {
+  .portfolio-project #pg-about .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .portfolio-project #pg-about .row:nth-child(2) .col-md-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+  .portfolio-project .info {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .portfolio-project #pg-about .col-md-4,
+  .portfolio-project #pg-about .row:nth-child(2) .col-md-8 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.portfolio-project #pg-about .col-md-offset-2 {
+  margin-left: 0 !important;
+}
+
+.portfolio-project #pg-about .text-center {
+  text-align: center !important;
+}

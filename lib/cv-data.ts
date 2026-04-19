@@ -1,3 +1,5 @@
+import type { WorkBrandId } from "./company-brands";
+
 export const person = {
   name: "Jakub Jarosiński",
   titleLines: [
@@ -46,12 +48,14 @@ export type TimelineItem = {
   period: string;
   bullets: string[];
   side: "left" | "right";
+  brandId: WorkBrandId;
 };
 
 export const experience: TimelineItem[] = [
   {
     role: "Data Engineer",
     org: "EY",
+    brandId: "ey",
     period: "04.2024 — present",
     bullets: [
       "Optimizing ETL processes",
@@ -65,6 +69,7 @@ export const experience: TimelineItem[] = [
   {
     role: "Data Engineer",
     org: "Uniqa Insurance Group",
+    brandId: "uniqa",
     location: "Warsaw",
     period: "08.2024 — present",
     bullets: [
@@ -77,6 +82,7 @@ export const experience: TimelineItem[] = [
   {
     role: "Data Engineer",
     org: "Polkomtel",
+    brandId: "polkomtel",
     location: "Warsaw",
     period: "09.2022 — 07.2024",
     bullets: [
@@ -91,6 +97,7 @@ export const experience: TimelineItem[] = [
   {
     role: "Data Analyst (Finance)",
     org: "Franklin Templeton Investments",
+    brandId: "franklin",
     location: "Poznań",
     period: "09.2021 — 04.2022",
     bullets: [
@@ -104,6 +111,7 @@ export const experience: TimelineItem[] = [
   {
     role: "QA Engineer",
     org: "Match-Trade Technologies",
+    brandId: "matchtrade",
     location: "Poznań",
     period: "10.2020 — 03.2021",
     bullets: [
@@ -118,6 +126,7 @@ export const experience: TimelineItem[] = [
   {
     role: "Equity Trader",
     org: "Traderhouse.pl",
+    brandId: "traderhouse",
     location: "Poznań",
     period: "05.2020 — 09.2020",
     bullets: [
@@ -131,6 +140,7 @@ export const experience: TimelineItem[] = [
   {
     role: "Marketing Specialist / Web Developer",
     org: "Dive. in life",
+    brandId: "dive",
     location: "Poznań",
     period: "02.2020 — 12.2021",
     bullets: [
@@ -144,6 +154,7 @@ export const experience: TimelineItem[] = [
   {
     role: "Sales Representative",
     org: "Southwestern Advantage",
+    brandId: "southwestern",
     location: "Nashville, TN",
     period: "04.2019 — 08.2019",
     bullets: [
