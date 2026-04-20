@@ -27,12 +27,12 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
         <div className="mb-6 flex items-center gap-4">
-          <div className="relative h-20 w-20 overflow-hidden rounded-2xl border border-white/15 bg-ink-900 shadow-glow ring-2 ring-accent/20 sm:h-24 sm:w-24">
+          <div className="relative h-20 w-20 overflow-hidden rounded-full border border-white/15 bg-ink-900 shadow-glow ring-2 ring-accent/20 sm:h-24 sm:w-24">
             <Image
               src={person.profileImage}
               alt={person.name}
               fill
-              className="object-cover"
+              className="object-cover rounded-full"
               sizes="96px"
               priority
             />
@@ -56,7 +56,7 @@ export function Hero() {
             <Typewriter strings={person.titleLines} typingMs={90} deletingMs={50} />
           </p>
           <p className="text-sm text-slate-400 sm:text-base">
-            Data Engineering & cool products development.
+            Data Engineering, AI Engineering & cool stuff development.
           </p>
         </div>
 

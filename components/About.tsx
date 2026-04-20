@@ -67,7 +67,7 @@ export function About() {
 
             <div className="mt-10">
               <p className="text-xs font-semibold uppercase tracking-wider text-mist">
-                Tech I reach for often
+                Tech I've used
               </p>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {about.techStack.map((t) => (

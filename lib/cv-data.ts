@@ -4,10 +4,11 @@ export const person = {
   name: "Jakub Jarosiński",
   titleLines: [
     "Data Engineer",
+    "Problem Solver",
     "Software Developer",
-    "Full-stack Developer",
-    "Web Developer",
-    "Builder",
+    "Cloud Expert",
+    "DevOps",
+    "AI Engineer",
   ],
   email: "jarosinskijac@gmail.com",
   github: "https://github.com/dzejkopjarosinski",
@@ -24,20 +25,27 @@ export const about = {
     `Outside of work I like digging into cloud platforms, web development, solid engineering practices, and finance.`,
   ],
   techStack: [
+    "Linux",
     "Python",
     "TypeScript",
     "Java",
     "Hadoop",
     "Spark",
+    "Databricks",
     "Airflow",
     "React",
     "Node",
     "SQL",
     "PostgreSQL",
+    "Kafka",
+    "RabbitMQ",
+    "LLMs",
+    "Langchain",
     "MySQL",
     "MongoDB",
-    "HTML",
-    "CSS",
+    "Docker",
+    "Azure",
+    "AWS"
   ],
 };
 
@@ -71,7 +79,7 @@ export const experience: TimelineItem[] = [
     org: "Uniqa Insurance Group",
     brandId: "uniqa",
     location: "Warsaw",
-    period: "08.2024 — present",
+    period: "08.2024 — 03.2025",
     bullets: [
       "Data lake work: Hadoop, Spark, Airflow, YARN, Hue, PostgreSQL, Oracle",
       "Python with Spark, Pandas, PySpark",
@@ -139,7 +147,7 @@ export const experience: TimelineItem[] = [
   },
   {
     role: "Marketing Specialist / Web Developer",
-    org: "Dive. in life",
+    org: "Dive in life",
     brandId: "dive",
     location: "Poznań",
     period: "02.2020 — 12.2021",
@@ -176,7 +184,7 @@ export type EducationItem = {
 
 export const education: EducationItem[] = [
   {
-    degree: "M.Sc. Computer Science and Econometrics",
+    degree: "Masters - Computer Science and Econometrics",
     school: "Poznań University of Business & Economics",
     location: "Poznań",
     period: "2021 — 2023",
@@ -191,11 +199,13 @@ export const education: EducationItem[] = [
     school: "Adam Mickiewicz University",
     location: "Poznań",
     period: "2019 — 2021",
-    notes: ["Completed six semesters in one year while working full time"],
+    notes: ["Completed six semesters in one year while working full time",
+            "Droped out to pursue career and studies in Computer Science",
+    ],
     side: "left",
   },
   {
-    degree: "B.Sc. Economics",
+    degree: "Bachelors - Economics",
     school: "Poznań University of Business & Economics",
     location: "Poznań",
     period: "2018 — 2021",

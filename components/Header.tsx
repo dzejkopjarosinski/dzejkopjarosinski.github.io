@@ -35,7 +35,7 @@ export function Header() {
         >
           JJ<span className="text-accent">.</span>
         </Link>
-        <nav className="flex max-w-[52vw] flex-wrap justify-end gap-x-4 gap-y-1 text-xs text-mist sm:text-sm md:max-w-none md:flex-nowrap md:gap-8">
+        <nav className="flex max-w-[52vw] flex-wrap justify-end gap-x-4 gap-y-1 text-sm font-semibold text-white/80 sm:text-base md:max-w-none md:flex-nowrap md:gap-8">
           {links.map((l) => (
             <a
               key={l.href}
