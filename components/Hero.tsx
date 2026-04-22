@@ -26,14 +26,14 @@ export function Hero() {
       />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-5 sm:px-8">
-        <div className="mb-6 flex items-center gap-4">
-          <div className="relative h-20 w-20 overflow-hidden rounded-full border border-white/15 bg-ink-900 shadow-glow ring-2 ring-accent/20 sm:h-24 sm:w-24">
+        <div className="mb-8 flex items-center gap-4">
+          <div className="relative h-24 w-24 overflow-hidden rounded-full border border-white/15 bg-ink-900 shadow-glow ring-2 ring-accent/20 sm:h-32 sm:w-32">
             <Image
               src={person.profileImage}
               alt={person.name}
               fill
               className="object-cover rounded-full"
-              sizes="96px"
+              sizes="(max-width: 640px) 96px, 128px"
               priority
             />
           </div>

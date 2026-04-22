@@ -55,15 +55,22 @@ export function Typewriter({
     typingMs,
   ]);
 
+  const longestString = strings.reduce((a, b) => (a.length > b.length ? a : b), "");
+
   return (
-    <span className="inline-flex min-h-[1.4em] items-center">
-      <span className="bg-gradient-to-r from-cyan-200 via-white to-violet-300 bg-clip-text text-transparent">
-        {display}
+    <span className="inline-grid grid-cols-1 grid-rows-1">
+      <span className="invisible row-start-1 col-start-1" aria-hidden>
+        {longestString}
       </span>
-      <span
-        className="ml-0.5 inline-block h-[1em] w-px translate-y-px bg-accent animate-pulse"
-        aria-hidden
-      />
+      <span className="row-start-1 col-start-1 inline-flex items-center">
+        <span className="bg-gradient-to-r from-cyan-200 via-white to-violet-300 bg-clip-text text-transparent">
+          {display}
+        </span>
+        <span
+          className="ml-1 inline-block h-[1em] w-0.5 translate-y-px bg-accent animate-pulse"
+          aria-hidden
+        />
+      </span>
     </span>
   );
 }

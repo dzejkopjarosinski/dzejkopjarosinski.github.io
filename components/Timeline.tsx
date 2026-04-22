@@ -37,18 +37,21 @@ export function Timeline() {
           </p>
         </Reveal>
 
-        <div className="relative mt-20">
+        <div className="mt-20">
+          <Reveal>
+            <h3 className="text-center font-display text-xl text-white">
+              Work experience
+            </h3>
+          </Reveal>
+        </div>
+
+        <div className="relative mt-8">
           <div
             className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-accent/50 via-white/15 to-violet-400/40 md:left-1/2 md:-translate-x-px"
             aria-hidden
           />
 
           <div className="space-y-14 md:space-y-20">
-            <Reveal>
-              <h3 className="pl-12 text-center font-display text-xl text-white md:pl-0">
-                Work experience
-              </h3>
-            </Reveal>
 
             {experience.map((item, i) => {
               const isRight = item.side === "right";
