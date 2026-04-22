@@ -23,8 +23,8 @@ export function Contact() {
               Let&apos;s build something ambitious
             </h2>
             <p className="mt-4 max-w-md text-mist">
-              Email is the best way to reach me. Happy to chat about data
-              engineering, backend and full-stack work, or new product builds.
+              Email is the best way to reach me. Happy to chat about Data
+              Engineering, Agentic AI, Backend and Software.
             </p>
           </Reveal>
 

@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { about, person } from "@/lib/cv-data";
 import { Reveal } from "./Reveal";
+import { motion } from "framer-motion";
 
 export function About() {
   return (
@@ -70,13 +73,28 @@ export function About() {
                 Tech I&apos;ve used
               </p>
               <ul className="mt-4 flex flex-wrap gap-2">
-                {about.techStack.map((t) => (
-                  <li
+                {about.techStack.map((t, i) => (
+                  <motion.li
                     key={t}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-sm text-slate-200"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    whileHover={{ 
+                      scale: 1.05, 
+                      backgroundColor: "rgba(255, 255, 255, 0.08)",
+                      borderColor: "rgba(34, 211, 238, 0.5)",
+                      color: "#22d3ee",
+                      boxShadow: "0 0 15px rgba(34, 211, 238, 0.2)"
+                    }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.2, 
+                      delay: i * 0.02,
+                      ease: "easeOut"
+                    }}
+                    className="cursor-default rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-sm text-slate-200 transition-colors duration-300"
                   >
                     {t}
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>

@@ -41,7 +41,6 @@ export function Hero() {
         </div>
 
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200/90">
-          Portfolio
         </p>
         <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
           {person.name.split(" ")[0]}

@@ -80,9 +80,9 @@ export function Timeline() {
                           >
                             {item.org}
                           </span>
-                          {item.location ? (
-                            <span className="text-sm font-normal text-mist">
-                              · {item.location}
+                          {item.employmentType ? (
+                            <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-white/10 text-mist ring-1 ring-white/10">
+                              {item.employmentType}
                             </span>
                           ) : null}
                         </p>
@@ -128,7 +128,6 @@ export function Timeline() {
                         <h4 className="mt-2 font-display text-xl text-white">{item.degree}</h4>
                         <p className="mt-1 text-sm text-mist">
                           {item.school}
-                          {item.location ? ` · ${item.location}` : ""}
                         </p>
                         <ul className="mt-4 space-y-2 text-sm text-slate-300">
                           {item.notes.map((n, j) => (
