@@ -1,9 +1,37 @@
 "use client";
 
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { about, person } from "@/lib/cv-data";
 import { Reveal } from "./Reveal";
 import { motion } from "framer-motion";
+
+const siteLinks: Record<string, string> = {
+  "harvium.pl": person.harvium,
+  "sarmetrics.pl": person.sarmetrics,
+};
+
+function linkifySites(text: string): ReactNode {
+  const pattern = new RegExp(`(${Object.keys(siteLinks).join("|")})`, "g");
+  const parts = text.split(pattern);
+
+  return parts.map((part, i) => {
+    const href = siteLinks[part];
+    if (!href) return part;
+
+    return (
+      <Link
+        key={`${part}-${i}`}
+        href={href}
+        className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition hover:decoration-accent"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {part}
+      </Link>
+    );
+  });
+}
 
 export function About() {
   return (
@@ -48,23 +76,7 @@ export function About() {
           <Reveal delay={0.1}>
             <div className="space-y-6 text-lg leading-relaxed text-slate-300">
               {about.paragraphs.map((p, i) => (
-                <p key={i}>
-                  {p.includes("harvium.pl") ? (
-                    <>
-                      {p.split("harvium.pl")[0]}
-                      <Link
-                        href={person.harvium}
-                        className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition hover:decoration-accent"
-                        target="_blank"
-                      >
-                        harvium.pl
-                      </Link>
-                      {p.split("harvium.pl")[1]}
-                    </>
-                  ) : (
-                    p
-                  )}
-                </p>
+                <p key={i}>{linkifySites(p)}</p>
               ))}
             </div>
 

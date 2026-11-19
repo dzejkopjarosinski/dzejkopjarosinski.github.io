@@ -55,19 +55,23 @@ export function Typewriter({
     typingMs,
   ]);
 
-  const longestString = strings.reduce((a, b) => (a.length > b.length ? a : b), "");
+  const longest = strings.reduce(
+    (best, next) => (next.length > best.length ? next : best),
+    "",
+  );
 
   return (
-    <span className="inline-grid grid-cols-1 grid-rows-1">
-      <span className="invisible row-start-1 col-start-1" aria-hidden>
-        {longestString}
+    <span className="relative inline-grid align-baseline">
+      {/* Reserve space for the longest title so typing never shifts layout */}
+      <span className="invisible col-start-1 row-start-1" aria-hidden>
+        {longest}
       </span>
-      <span className="row-start-1 col-start-1 inline-flex items-center">
+      <span className="col-start-1 row-start-1 inline-flex items-center">
         <span className="bg-gradient-to-r from-cyan-200 via-white to-violet-300 bg-clip-text text-transparent">
           {display}
         </span>
         <span
-          className="ml-1 inline-block h-[1em] w-0.5 translate-y-px bg-accent animate-pulse"
+          className="ml-0.5 inline-block h-[1em] w-px translate-y-px bg-accent animate-pulse"
           aria-hidden
         />
       </span>

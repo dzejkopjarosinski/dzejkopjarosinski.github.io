@@ -3,6 +3,7 @@
  * Tailwind classes must stay as complete string literals for the JIT scanner.
  */
 export type WorkBrandId =
+  | "ge"
   | "ey"
   | "uniqa"
   | "polkomtel"
@@ -24,6 +25,16 @@ export type WorkBrandTheme = {
 };
 
 export const workBrandThemes: Record<WorkBrandId, WorkBrandTheme> = {
+  ge: {
+    cardBase:
+      "border-sky-400/20 bg-gradient-to-br from-sky-500/[0.09] via-ink-950/90 to-ink-950 shadow-[0_0_0_1px_rgba(56,189,248,0.06)] transition-all duration-500 ease-out",
+    cardGlow:
+      "border-sky-400/50 shadow-[0_0_0_1px_rgba(56,189,248,0.16),0_0_80px_-12px_rgba(56,189,248,0.46),0_0_130px_-28px_rgba(14,165,233,0.26)] scale-[1.003]",
+    period: "text-sky-200/80",
+    org: "text-sky-100",
+    bullet: "bg-sky-300/85",
+    dot: "from-sky-300 to-blue-700",
+  },
   ey: {
     cardBase:
       "border-yellow-400/20 bg-gradient-to-br from-yellow-400/[0.09] via-ink-950/90 to-ink-950 shadow-[0_0_0_1px_rgba(250,204,21,0.06)] transition-all duration-500 ease-out",
