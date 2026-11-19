@@ -14,6 +14,7 @@ export const person = {
   github: "https://github.com/dzejkopjarosinski",
   linkedin: "https://www.linkedin.com/in/jakub-jarosi%C5%84ski/",
   harvium: "https://www.harvium.pl/",
+  sarmetrics: "https://www.sarmetrics.pl/",
   profileImage: "/images/profile-pic.png",
   heroImage: "/images/cover_bg_3.jpg",
 };
@@ -21,7 +22,7 @@ export const person = {
 export const about = {
   greeting: "Hello there",
   paragraphs: [
-    `Welcome to my website. I am a data engineer and software developer with experience from startups to large international organizations. At EY I build reliable data pipelines and backend services that keep internal products running. I also lead technical development at the commodity trading startup harvium.pl.`,
+    `Welcome to my website. I am a data engineer and software developer with experience from startups to large international organizations. At EY I build reliable data pipelines and backend services that keep internal products running. I also lead technical development at the commodity trading startup harvium.pl. Im also co-creator of sarmetrics.pl.`,
     `Outside of work I like digging into cloud platforms, web development, solid engineering practices, and finance.`,
   ],
   techStack: [
@@ -62,9 +63,23 @@ export type TimelineItem = {
 export const experience: TimelineItem[] = [
   {
     role: "Data Engineer",
+    org: "GE Aerospace",
+    brandId: "ge",
+    period: "05.2026 — present",
+    bullets: [
+      "Building enterprise data pipelines",
+      "SQL & Python development",
+      "Cloud data platform engineering",
+      "Data architecture & quality",
+      "Supporting analytics and AI systems",
+    ],
+    side: "left",
+  },
+  {
+    role: "Data Engineer",
     org: "EY",
     brandId: "ey",
-    period: "04.2024 — present",
+    period: "04.2024 — 05.2026",
     bullets: [
       "Optimizing ETL processes",
       "SQL & Python development",
@@ -244,10 +259,10 @@ export const projects: Project[] = [
     image: "/images/maxresdefault.jpg",
   },
   {
-    title: "JS Clock App",
-    tag: "Design",
+    title: "SarMetrics",
+    tag: "Full stack",
     href: "/project4/index.html",
-    image: "/images/Clockapp.png",
+    image: "/images/SarMetrics-Banner.jpg",
   },
   {
     title: "Equity Portfolio Return Analyzer",

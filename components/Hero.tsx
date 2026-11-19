@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100dvh] flex-col justify-end overflow-hidden pb-16 pt-32 sm:pb-24 sm:pt-28"
+      className="relative flex min-h-[100dvh] flex-col justify-center overflow-hidden pb-16 pt-28 sm:pb-20 sm:pt-24"
     >
       <Image
         src={person.heroImage}
